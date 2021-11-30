@@ -33,6 +33,38 @@ _I'm particularly interested in learning more about hosting headless content sit
 
 _Having a keen interest in security of WordPress websites and finding vulnerabilities in plugins themes the recent article during pandemic I liked was “[The fundamentals of security incident response—during a pandemic and beyond](https://www.hpe.com/us/en/insights/articles/the-fundamentals-of-security-incident-response-2008.html?jumpid=em_xim62bdg7q_aid-520023745%22%20%5Ct%20%22_blank)”_
 
+**Add a temporary in-app redirect to your project, redirecting /hello-vercel (or any path – but be sure to tell us which!) to https://vercel.com**
+
+_Created a Hello Vercel Menu link which redirects to [https://vercel.com](https://vercel.com) adding redirects code to next.config.js file_
+
+**A customer writes in to the Helpdesk asking "How do I do a redirect from /hello-vercel to https://vercel.com?" In a couple of paragraphs, how do you respond?**
+
+_Thanks for contacting Vercel Support! I’m Harshad and I’d be happy to help with your inquiry.
+To redirect any url on your project to another site, you can use [In-Application redirect](https://vercel.com/support/articles/does-vercel-support-permanent-redirects?query=redire#in-application-redirects) method, you’ll have to deploy next.config.js which should contain following code:
+
+```
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/about',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
+}
+```
+_Push the file to your GitHub repository and then click the redeployment button in Vercel dashboard if you want to manually redeploy your changes, else Vercel will
+automatically redeploy the changes made to your project from your GitHub repository._
+
+_Hope this helps!_
+
+_If you have any more questions, please feel free to write back to us. Have a nice day!
+
+_Best regards,_
+_Harshad Mane_
+
 
 
 
