@@ -2,7 +2,7 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/photos',
+        source: '/hello-vercel',
         destination: 'https://vercel.com',
         permanent: true,
       },
